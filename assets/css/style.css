@@ -1,9 +1,9 @@
 :root {
-    --dark: #000000;
-    --darkBg: #000000;
+    --dark: #7a7879;
+    --darkBg: #292627;
     --whiteColor: #ffffff;
-    --whiteBg: #ffffff;
-    --primary: #B8FF34;
+    --whiteBg: #b5b3b4;
+    --primary: #e63c99;
     --paragraph: rgba(29, 29, 31, 0.7);
     --font_inter_tight: "Inter Tight", sans-serif;
     --font_inter: "Inter", system-ui;
