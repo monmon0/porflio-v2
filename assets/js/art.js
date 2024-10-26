@@ -36,18 +36,6 @@ const movies = [
 		poster:
 			"https://f8n-production-collection-assets.imgix.net/0x5d022Ac89eE4cc874CC526C5486e1ff9FBe8ff22/1/nft.png?auto=format%2Ccompress&q=70&cs=srgb&h=1200&w=1200&fnd_key=v1"
 	},
-
-	{
-		title: "The Shining",
-		year: 2023,
-		director: "Stanley Kubrick",
-		rating: "R",
-		description:
-			"A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings.",
-		poster:
-			"././assets/imgs/figma.png",
-        link:"https://www.figma.com/design/W3Q1ryf0QVhqH3Z4Kh7HZm/Commission-Site-(client)?node-id=0-1&t=WlH0U8kejURBdzMr-1"
-	},
     {
 		title: "The Shining",
 		year: 1980,
@@ -70,8 +58,68 @@ const movies = [
 			"././assets/imgs/1-lying.png",
         link:"././assets/imgs/1-lying.png"
 	},
+    {
+		title: "The Shining",
+		year: 2023,
+		director: "Stanley Kubrick",
+		rating: "R",
+		description:
+			"A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings.",
+		poster:
+			"././assets/imgs/figma.png",
+        link:"https://www.figma.com/design/W3Q1ryf0QVhqH3Z4Kh7HZm/Commission-Site-(client)?node-id=0-1&t=WlH0U8kejURBdzMr-1"
+	},
+    {
+		title: "The Shining",
+		year: 2023,
+		director: "Stanley Kubrick",
+		rating: "R",
+		description:
+			"A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings.",
+		poster:
+			"././assets/imgs/dsc.png",
+        link:"././assets/imgs/dsc.png"
+	},
+    {
+		title: "The Shining",
+		year: 2023,
+		director: "Stanley Kubrick",
+		rating: "R",
+		description:
+			"A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings.",
+		poster:
+			"././assets/imgs/ht6.png",
+        link:"././assets/imgs/dsc.png"
+	},
 
 ];
+
+const frontImageSection = document.querySelector('.front-image');
+const topImage = document.querySelector('.top-image');
+const bottomImage = document.querySelector('.bottom-image');
+
+window.addEventListener('scroll', () => {
+
+
+  const scrollPosition = window.scrollY;
+  if(scrollPosition==0){
+    topImage.style.opacity = 0;
+    bottomImage.style.opacity = 0;
+  }else{
+    topImage.style.opacity = 1;
+    bottomImage.style.opacity = 1;
+  }
+  const windowHeight = window.innerHeight;
+  const frontImageSectionTop = frontImageSection.offsetTop;
+  const frontImageSectionHeight = frontImageSection.offsetHeight;
+
+  const topImageOffset = (scrollPosition / frontImageSectionHeight) * 60;
+
+  let bottomImageOffset = -((scrollPosition / frontImageSectionHeight) * 60);
+
+  topImage.style.transform = `translateY(${topImageOffset}%)`;
+  bottomImage.style.transform = `translateY(${bottomImageOffset}%)`;
+});
 
 class MovieCarousel {
 	constructor() {

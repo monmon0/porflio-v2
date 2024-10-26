@@ -738,6 +738,45 @@ a.link-with-border:hover {
     letter-spacing: 0.01em;
 }
 
+body {
+    height: 300vh;
+  }
+
+  .front-image {
+    top: 20%;
+    position: relative;
+    padding-top: 250px;
+    overflow: hidden;
+    scroll-behavior: smooth; /* added smooth scroll*/
+  }
+
+  .front-image .top-image,
+  .front-image .bottom-image{
+    opacity: 0;
+    position: absolute; /* changed position to absolute*/
+    transition: all 0.3s linear; /*changed transition to linear*/
+    width: 30%;
+    /* width: 200px; */
+    scroll-behavior: smooth; /* added smooth scroll*/
+  }
+
+  .front-image .top-image {
+    padding: 0;
+    top: 0;
+    right: 10%;
+  }
+
+  .front-image .bottom-image {
+    padding: 0;
+    bottom: 0;
+    left: 10%;
+  }
+
+  .front-image .content picture img {
+    width: 100%;
+    height: 525px;
+    object-fit: cover;
+  }
 
 .circle-primary-shape {
     position: absolute !important;
