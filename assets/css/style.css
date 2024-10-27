@@ -200,6 +200,7 @@ main.page-main {
 	filter: brightness(var(--hover-brightness));
 }
 
+
 /* Content Overlay */
 .movie-content {
 	position: absolute;
@@ -1040,6 +1041,17 @@ body {
 .service-sec {
     padding-top: 160px;
     padding-bottom: 160px;
+}
+.notion-embed {
+    padding: 3em;
+    align-items: center;
+
+}
+.notion-embed h1 {
+    padding: 3em;
+    align-content: center;
+    text-align: center;
+    font-family: var(--font_ballet);
 }
 .blog-sec {
     padding-bottom: 150px;
