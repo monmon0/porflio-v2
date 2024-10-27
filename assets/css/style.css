@@ -1045,12 +1045,11 @@ body {
 .notion-embed {
     padding: 3em;
     align-items: center;
-
 }
 .notion-embed h1 {
-    padding: 3em;
-    align-content: center;
-    text-align: center;
+    padding: 1em 0em 1em 0em;
+    /* * align-content: center; */
+    text-align: center; 
     font-family: var(--font_ballet);
 }
 .blog-sec {
